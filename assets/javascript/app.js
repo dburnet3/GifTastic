@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var realityTV = ["Real_Housewives_of_Atlanta", "@RHOP", "@RHOBH", "married2med", "@thehills", "@kuwtk"];
+    var realityTV = ["Real_Housewives_of_Atlanta", "Real_Housewives_of_Potomac", "Real_Housewives_of_Beverly_Hills", "married2med", "@thehills", "@kuwtk"];
 
     function renderButtons() {
         $("#realityTV_choices").empty();
@@ -31,7 +31,7 @@ $(document).ready(function () {
             var results = response.data;
             $("#realityTV").empty();
             for (var i = 0; i < results.length; i++) {
-                var mainContainer = $("<div>");
+                var mainContainer = $('<div>');
                 var p = $("<p>").text("Rating: " + results[i].rating);
                 var tv = $("<img>");
 
